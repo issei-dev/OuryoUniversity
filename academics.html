@@ -1,0 +1,323 @@
+<!-- File: academics.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>学部紹介 | 桜陵女子大学</title>
+<meta name="description" content="桜陵女子大学の学部一覧。医・薬・看護の医療系、国際・文学・コミュニケーションの国際文化系、保育・被服・経済の生活実学系まで、9学部を擁する総合女子大学です。">
+<link rel="stylesheet" href="assets/common.css">
+<style>
+  /* ===== 学部ページ固有 ===== */
+  .page-hero {
+    background: linear-gradient(135deg, #d9a7ae 0%, #b76e79 60%, #8e4d57 100%);
+    color: #fff;
+    text-align: center;
+    padding: 4rem 0;
+  }
+  .page-hero h1 {
+    font-family: var(--font-mincho);
+    font-size: 2.2rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.6rem;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  }
+  .page-hero .en {
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    opacity: 0.9;
+  }
+
+  .group-head {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .group-head h2 {
+    font-family: var(--font-mincho);
+    font-size: 1.6rem;
+    color: var(--color-primary-dark);
+    letter-spacing: 0.06em;
+    margin-bottom: 0.5rem;
+  }
+  .group-head p {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+  }
+
+  .faculty-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .faculty-row {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s, box-shadow 0.25s;
+    border-top: 4px solid var(--color-primary);
+    display: block;
+    color: inherit;
+    position: relative;
+  }
+  .faculty-row:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(183, 110, 121, 0.18);
+  }
+
+  .faculty-row .fac-name {
+    font-family: var(--font-mincho);
+    font-size: 1.25rem;
+    color: var(--color-accent);
+    margin-bottom: 0.6rem;
+  }
+  .faculty-row .fac-depts {
+    font-size: 0.9rem;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+  }
+
+  .fac-meta {
+    padding-top: 0.8rem;
+    border-top: 1px dashed var(--color-border);
+    font-size: 0.82rem;
+  }
+  .fac-meta .career {
+    color: var(--color-text-light);
+  }
+  .fac-meta .career::before {
+    content: "めざせる進路：";
+    color: var(--color-primary-dark);
+    font-weight: 600;
+  }
+
+  /* リンク誘導の矢印 */
+  .faculty-row .arrow {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    transition: transform 0.25s;
+  }
+  .faculty-row:hover .arrow {
+    transform: translateX(4px);
+  }
+
+  /* 系統で帯の色を変える */
+  .group-medical .faculty-row { border-top-color: #8e4d57; }
+  .group-culture .faculty-row { border-top-color: #b76e79; }
+  .group-life .faculty-row { border-top-color: #d9a7ae; }
+
+  .note-box {
+    max-width: 760px;
+    margin: 0 auto;
+    background-color: var(--color-bg-soft);
+    border-left: 4px solid var(--color-primary);
+    border-radius: 8px;
+    padding: 1.2rem 1.5rem;
+    font-size: 0.82rem;
+    color: var(--color-text-light);
+  }
+
+  @media (max-width: 720px) {
+    .faculty-list {
+      grid-template-columns: 1fr;
+    }
+    .page-hero h1 {
+      font-size: 1.7rem;
+    }
+    section {
+      padding: 3.5rem 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ヘッダー -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="site-logo">桜陵女子大学<span>OURYO WOMEN'S UNIVERSITY</span></a>
+    <nav class="global-nav">
+      <ul>
+        <li><a href="/about">大学について</a></li>
+        <li><a href="academics.html">学部・大学院</a></li>
+        <li><a href="/admissions">入試情報</a></li>
+        <li><a href="/campuslife">キャンパスライフ</a></li>
+        <li><a href="/career">就職・キャリア</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a href="/admissions/request" class="btn btn-outline">資料請求</a>
+      <a href="/admissions/opencampus" class="btn btn-primary">オープンキャンパス</a>
+    </div>
+    <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ドロワー -->
+<div class="drawer-overlay"></div>
+<nav class="drawer" id="drawer" aria-hidden="true" aria-label="モバイルメニュー">
+  <div class="drawer-nav">
+    <ul>
+      <li><a href="/about">大学について</a></li>
+      <li><a href="academics.html">学部・大学院</a></li>
+      <li><a href="/admissions">入試情報</a></li>
+      <li><a href="/campuslife">キャンパスライフ</a></li>
+      <li><a href="/career">就職・キャリア</a></li>
+      <li><a href="affiliated-school.html">併設校・付属高校</a></li>
+    </ul>
+  </div>
+  <div class="drawer-cta">
+    <a href="/admissions/request" class="btn btn-outline">資料請求</a>
+    <a href="/admissions/opencampus" class="btn btn-primary">オープンキャンパス予約</a>
+  </div>
+</nav>
+
+<!-- パンくず -->
+<div class="breadcrumb">
+  <div class="container"><a href="/">ホーム</a> ＞ 学部・大学院</div>
+</div>
+
+<!-- ページヒーロー -->
+<section class="page-hero">
+  <p class="en">FACULTIES</p>
+  <h1>学部紹介</h1>
+</section>
+
+<!-- リード -->
+<section>
+  <div class="container">
+    <p class="lead-text reveal">
+      医療系から実学系まで、女性のライフステージ全般に関わる9学部を擁する総合女子大学。
+      あなたの「学びたい」がきっと見つかります。
+    </p>
+  </div>
+</section>
+
+<!-- 医療・経済系 -->
+<section class="section-bg-soft group-medical">
+  <div class="container">
+    <div class="group-head reveal">
+      <h2>医療・経済系</h2>
+      <p>専門職・国家資格をめざす、難関の看板学部群</p>
+    </div>
+    <div class="faculty-list">
+      <a href="academics/medicine.html" class="faculty-row reveal">
+        <div class="fac-name">医学部</div>
+        <div class="fac-depts">医学科（6年制）</div>
+        <div class="fac-meta"><span class="career">医師国家試験／臨床医・研究医</span></div>
+        <span class="arrow">→</span>
+      </a>
+      <a href="academics/pharmacy.html" class="faculty-row reveal" data-delay="1">
+        <div class="fac-name">薬学部</div>
+        <div class="fac-depts">薬学科（6年制）</div>
+        <div class="fac-meta"><span class="career">薬剤師国家試験／病院・薬局・製薬</span></div>
+        <span class="arrow">→</span>
+      </a>
+      <a href="academics/nursing.html" class="faculty-row reveal" data-delay="2">
+        <div class="fac-name">看護学部</div>
+        <div class="fac-depts">看護学科</div>
+        <div class="fac-meta"><span class="career">看護師・保健師・助産師</span></div>
+        <span class="arrow">→</span>
+      </a>
+      <a href="academics/economics.html" class="faculty-row reveal" data-delay="3">
+        <div class="fac-name">経済学部</div>
+        <div class="fac-depts">経済学科／経営学科</div>
+        <div class="fac-meta"><span class="career">公認会計士・金融・総合職</span></div>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 国際・文化系 -->
+<section class="group-culture">
+  <div class="container">
+    <div class="group-head reveal">
+      <h2>国際・文化系</h2>
+      <p>語学・文化・人間関係を学ぶ、女子大の中核学部群</p>
+    </div>
+    <div class="faculty-list">
+      <a href="academics/international.html" class="faculty-row reveal">
+        <div class="fac-name">国際学部</div>
+        <div class="fac-depts">国際関係学科／国際教養学科</div>
+        <div class="fac-meta"><span class="career">商社・航空・観光・国際機関</span></div>
+        <span class="arrow">→</span>
+      </a>
+      <a href="academics/literature.html" class="faculty-row reveal" data-delay="1">
+        <div class="fac-name">文学部</div>
+        <div class="fac-depts">日本文学科／英米文学科／史学科</div>
+        <div class="fac-meta"><span class="career">教員・出版・公務員</span></div>
+        <span class="arrow">→</span>
+      </a>
+      <a href="academics/communication.html" class="faculty-row reveal" data-delay="2">
+        <div class="fac-name">コミュニケーション学部</div>
+        <div class="fac-depts">メディアコミュニケーション学科／心理コミュニケーション学科</div>
+        <div class="fac-meta"><span class="career">広告・PR・人事・心理関連</span></div>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 生活・実学系 -->
+<section class="section-bg-soft group-life">
+  <div class="container">
+    <div class="group-head reveal">
+      <h2>生活・実学系</h2>
+      <p>資格・実技・就職力を重視する、面倒見の良い実学系学部群</p>
+    </div>
+    <div class="faculty-list">
+      <a href="academics/childcare.html" class="faculty-row reveal">
+        <div class="fac-name">児童保育学部</div>
+        <div class="fac-depts">児童保育学科／幼児教育学科</div>
+        <div class="fac-meta"><span class="career">保育士・幼稚園教諭・認定こども園</span></div>
+        <span class="arrow">→</span>
+      </a>
+      <a href="academics/lifescience.html" class="faculty-row reveal" data-delay="1">
+        <div class="fac-name">生活科学部</div>
+        <div class="fac-depts">被服デザイン学科／食物栄養学科</div>
+        <div class="fac-meta"><span class="career">アパレル・ファッション・栄養士</span></div>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 注記 -->
+<section>
+  <div class="container">
+    <div class="note-box reveal">
+      ※ 各学部では資格取得・実践教育・就職支援に力を入れています。
+      学べる内容やカリキュラムの詳細は、各学部ページおよび資料請求にてご確認いただけます。
+    </div>
+  </div>
+</section>
+
+<!-- フッター -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <p class="name">桜陵女子大学</p>
+        <address>〒000-0000<br>天府都 白金ヶ丘区 一丁目<br>OURYO WOMEN'S UNIVERSITY</address>
+      </div>
+      <div class="footer-links">
+        <div><h4>大学について</h4><ul><li><a href="/about/message">学長挨拶</a></li><li><a href="/about/history">建学の精神・沿革</a></li><li><a href="affiliated-school.html">併設校・付属高校</a></li></ul></div>
+        <div><h4>受験生の方へ</h4><ul><li><a href="academics.html">学部・大学院</a></li><li><a href="/admissions/opencampus">オープンキャンパス</a></li><li><a href="/admissions/request">資料請求</a></li></ul></div>
+        <div><h4>関連校</h4><ul><li><a href="affiliated-school.html">桜陵女子高等学校</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Ouryo Women's University. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script src="assets/common.js"></script>
+</body>
+</html>
