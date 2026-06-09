@@ -1,0 +1,131 @@
+<!-- File: about/message.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>学長挨拶 | 桜陵女子大学</title>
+<meta name="description" content="桜陵女子大学 学長からのメッセージ。建学の精神「自律と共生」のもと、女性一人ひとりの可能性を育む教育への想いをお伝えします。">
+<link rel="stylesheet" href="../assets/common.css">
+<style>
+  .page-hero { background: linear-gradient(135deg, #d9a7ae 0%, #b76e79 60%, #8e4d57 100%); color: #fff; text-align: center; padding: 4rem 0; }
+  .page-hero h1 { font-family: var(--font-mincho); font-size: 2.2rem; letter-spacing: 0.1em; margin-bottom: 0.6rem; text-shadow: 0 2px 12px rgba(0,0,0,0.2); }
+  .page-hero .en { font-size: 0.8rem; letter-spacing: 0.25em; opacity: 0.9; }
+
+  .message-wrap { display: flex; gap: 3rem; max-width: 980px; margin: 0 auto; align-items: flex-start; }
+  .message-photo { flex: 0 0 32%; }
+  .message-photo .img-ph { width: 100%; min-height: 340px; border-radius: 14px; font-size: 4rem; box-shadow: var(--shadow); }
+  .message-photo .caption { text-align: center; margin-top: 1rem; }
+  .message-photo .caption .role { font-size: 0.8rem; color: var(--color-text-light); }
+  .message-photo .caption .pname { font-family: var(--font-mincho); font-size: 1.2rem; color: var(--color-accent); margin-top: 0.2rem; }
+
+  .message-body { flex: 1; }
+  .message-body .headline { font-family: var(--font-mincho); font-size: 1.6rem; color: var(--color-primary-dark); line-height: 1.6; margin-bottom: 1.8rem; }
+  .message-body p { margin-bottom: 1.3rem; font-size: 0.97rem; }
+  .message-body .sign { text-align: right; font-family: var(--font-mincho); margin-top: 2rem; }
+  .message-body .sign .s-role { font-size: 0.85rem; color: var(--color-text-light); }
+  .message-body .sign .s-name { font-size: 1.3rem; color: var(--color-accent); margin-top: 0.3rem; }
+
+  @media (max-width: 820px) {
+    .message-wrap { flex-direction: column; align-items: center; }
+    .message-photo { flex: none; width: 70%; max-width: 280px; }
+    .page-hero h1 { font-size: 1.7rem; }
+    section { padding: 3.5rem 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="site-logo">桜陵女子大学<span>OURYO WOMEN'S UNIVERSITY</span></a>
+    <nav class="global-nav">
+      <ul>
+        <li><a href="/about">大学について</a></li>
+        <li><a href="../academics.html">学部・大学院</a></li>
+        <li><a href="../admissions/index.html">入試情報</a></li>
+        <li><a href="/campuslife">キャンパスライフ</a></li>
+        <li><a href="/career">就職・キャリア</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a href="../admissions/request.html" class="btn btn-outline">資料請求</a>
+      <a href="../admissions/opencampus.html" class="btn btn-primary">オープンキャンパス</a>
+    </div>
+    <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="drawer-overlay"></div>
+<nav class="drawer" id="drawer" aria-hidden="true" aria-label="モバイルメニュー">
+  <div class="drawer-nav">
+    <ul>
+      <li><a href="message.html">学長挨拶</a></li>
+      <li><a href="history.html">建学の精神・沿革</a></li>
+      <li><a href="../academics.html">学部・大学院</a></li>
+      <li><a href="../admissions/index.html">入試情報</a></li>
+      <li><a href="../affiliated-school.html">併設校・付属高校</a></li>
+    </ul>
+  </div>
+  <div class="drawer-cta">
+    <a href="../admissions/request.html" class="btn btn-outline">資料請求</a>
+    <a href="../admissions/opencampus.html" class="btn btn-primary">オープンキャンパス予約</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="container"><a href="/">ホーム</a> ＞ <a href="/about">大学について</a> ＞ 学長挨拶</div>
+</div>
+
+<section class="page-hero">
+  <p class="en">MESSAGE</p>
+  <h1>学長挨拶</h1>
+</section>
+
+<section>
+  <div class="container">
+    <div class="message-wrap">
+      <div class="message-photo reveal">
+        <div class="img-ph" data-img="../assets/img/president.jpg">
+          <span class="img-ph-icon">👩‍🏫</span>
+        </div>
+        <div class="caption">
+          <p class="role">桜陵女子大学 学長</p>
+          <p class="pname">桜井 久子</p>
+        </div>
+      </div>
+      <div class="message-body reveal" data-delay="1">
+        <p class="headline">「自律と共生」のもとで、<br>あなたの可能性を、未来へ。</p>
+        <p>桜陵女子大学のウェブサイトをご覧いただき、ありがとうございます。本学は創立以来、建学の精神「自律と共生」を掲げ、自ら考え行動する力と、他者を思いやり共に生きる力を兼ね備えた女性を育ててまいりました。</p>
+        <p>めまぐるしく変化する現代社会において、女性が活躍できる場は大きく広がっています。本学は、医療・国際・文化・生活科学まで多彩な学問領域を擁し、一人ひとりの「学びたい」「なりたい」に応える教育を実践しています。少人数制を活かしたきめ細かな指導と、実践を重んじるカリキュラムを通じて、確かな専門性と豊かな人間性を育みます。</p>
+        <p>大学での学びは、知識を得るだけでなく、自分自身と向き合い、生涯にわたる仲間と出会う場でもあります。白金ヶ丘の緑豊かなキャンパスで、あなたらしい4年間を過ごし、社会へと羽ばたいてほしいと願っています。</p>
+        <p>皆さんが本学で大きく成長される日を、教職員一同、心よりお待ちしています。</p>
+        <div class="sign">
+          <p class="s-role">桜陵女子大学 学長</p>
+          <p class="s-name">桜井 久子</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <p class="name">桜陵女子大学</p>
+        <address>〒000-0000<br>天府都 白金ヶ丘区 一丁目<br>OURYO WOMEN'S UNIVERSITY</address>
+      </div>
+      <div class="footer-links">
+        <div><h4>大学について</h4><ul><li><a href="message.html">学長挨拶</a></li><li><a href="history.html">建学の精神・沿革</a></li><li><a href="../affiliated-school.html">併設校・付属高校</a></li></ul></div>
+        <div><h4>受験生の方へ</h4><ul><li><a href="../academics.html">学部・大学院</a></li><li><a href="../admissions/opencampus.html">オープンキャンパス</a></li><li><a href="../admissions/request.html">資料請求</a></li></ul></div>
+        <div><h4>関連校</h4><ul><li><a href="../affiliated-school.html">桜陵女子高等学校</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Ouryo Women's University. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script src="../assets/common.js"></script>
+</body>
+</html>
