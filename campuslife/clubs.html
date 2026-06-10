@@ -1,0 +1,179 @@
+<!-- File: campuslife/clubs.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>クラブ・サークル | 桜陵女子大学</title>
+<meta name="description" content="桜陵女子大学のクラブ・サークル紹介。全国大会常連の女子バスケットボール部・チアリーダー部をはじめ、体育会・文化系の多彩な団体が活発に活動しています。">
+<link rel="stylesheet" href="../assets/common.css">
+<style>
+.page-hero { background: linear-gradient(135deg, #d9a7ae 0%, #b76e79 60%, #8e4d57 100%); color: #fff; text-align: center; padding: 4rem 0; }
+.page-hero h1 { font-family: var(--font-mincho); font-size: 2.2rem; letter-spacing: 0.1em; margin-bottom: 0.6rem; text-shadow: 0 2px 12px rgba(0,0,0,0.2); }
+.page-hero .en { font-size: 0.8rem; letter-spacing: 0.25em; opacity: 0.9; }
+
+.data-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; text-align: center; }
+.data-item .num { font-family: var(--font-mincho); font-size: 2.6rem; color: var(--color-primary); line-height: 1.2; }
+.data-item .num small { font-size: 1rem; margin-left: 0.2rem; }
+.data-item .label { font-size: 0.85rem; color: var(--color-text-light); margin-top: 0.4rem; }
+
+.flagship-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 960px; margin: 0 auto; }
+.flagship-card { background-color: var(--color-bg); border: 1px solid var(--color-border); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); transition: transform 0.25s, box-shadow 0.25s; display: block; color: inherit; }
+.flagship-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(183,110,121,0.2); }
+.flagship-visual { position: relative; height: 240px; font-size: 5rem; }
+.flagship-visual .badge { position: absolute; top: 1rem; left: 1rem; background-color: var(--color-accent); color: #fff; font-size: 0.7rem; padding: 0.3rem 0.9rem; border-radius: 999px; letter-spacing: 0.05em; }
+.flagship-body { padding: 1.8rem; }
+.flagship-body h3 { font-family: var(--font-mincho); font-size: 1.4rem; color: var(--color-accent); margin-bottom: 0.6rem; }
+.flagship-body p { font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 1rem; }
+.flagship-body .more { font-size: 0.85rem; color: var(--color-primary); font-weight: 600; }
+.flagship-card:hover .more { text-decoration: underline; }
+
+.club-cat { max-width: 960px; margin: 0 auto; }
+.club-cat-title { font-family: var(--font-mincho); font-size: 1.3rem; color: var(--color-primary-dark); border-left: 4px solid var(--color-primary); padding-left: 0.8rem; margin-bottom: 1.5rem; }
+.club-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 3rem; }
+.club-chip { background-color: var(--color-bg); border: 1px solid var(--color-border); border-radius: 10px; padding: 1rem 1.2rem; font-size: 0.92rem; display: flex; align-items: center; gap: 0.6rem; transition: background-color 0.2s, transform 0.2s; color: inherit; }
+.club-chip:hover { background-color: var(--color-bg-soft); transform: translateY(-3px); }
+.club-chip.linked { border-color: var(--color-primary); }
+.club-chip .ic { font-size: 1.3rem; }
+.club-chip .tag-strong { margin-left: auto; font-size: 0.65rem; background-color: var(--color-primary); color: #fff; padding: 0.1rem 0.5rem; border-radius: 4px; }
+.club-chip .tag-pop { margin-left: auto; font-size: 0.65rem; background-color: var(--color-accent); color: #fff; padding: 0.1rem 0.5rem; border-radius: 4px; }
+.club-chip .arrow { margin-left: auto; color: var(--color-primary); font-weight: 600; }
+.club-chip.linked .tag-strong + .arrow, .club-chip.linked .tag-pop + .arrow { margin-left: 0.4rem; }
+
+@media (max-width: 900px) { .data-grid { grid-template-columns: repeat(2,1fr); } .flagship-grid { grid-template-columns: 1fr; } .club-list { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 560px) { .data-grid, .club-list { grid-template-columns: 1fr; } .page-hero h1 { font-size: 1.7rem; } section { padding: 3.5rem 0; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../index.html" class="site-logo">桜陵女子大学<span>OURYO WOMEN'S UNIVERSITY</span></a>
+    <nav class="global-nav"><ul>
+      <li><a href="../about/message.html">大学について</a></li>
+      <li><a href="../academics.html">学部・大学院</a></li>
+      <li><a href="../admissions/index.html">入試情報</a></li>
+      <li><a href="clubs.html">キャンパスライフ</a></li>
+      <li><a href="#">就職・キャリア</a></li>
+    </ul></nav>
+    <div class="header-cta">
+      <a href="../admissions/request.html" class="btn btn-outline">資料請求</a>
+      <a href="../admissions/opencampus.html" class="btn btn-primary">オープンキャンパス</a>
+    </div>
+    <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="drawer-overlay"></div>
+<nav class="drawer" id="drawer" aria-hidden="true" aria-label="モバイルメニュー">
+  <div class="drawer-nav"><ul>
+    <li><a href="../about/message.html">学長挨拶</a></li>
+    <li><a href="../academics.html">学部・大学院</a></li>
+    <li><a href="../admissions/index.html">入試情報</a></li>
+    <li><a href="clubs.html">クラブ・サークル</a></li>
+    <li><a href="festival.html">桜陵祭（学園祭）</a></li>
+    <li><a href="../affiliated-school.html">併設校・付属高校</a></li>
+  </ul></div>
+  <div class="drawer-cta">
+    <a href="../admissions/request.html" class="btn btn-outline">資料請求</a>
+    <a href="../admissions/opencampus.html" class="btn btn-primary">オープンキャンパス予約</a>
+  </div>
+</nav>
+
+<div class="breadcrumb"><div class="container"><a href="../index.html">ホーム</a> ＞ キャンパスライフ ＞ クラブ・サークル</div></div>
+
+<section class="page-hero">
+  <p class="en">CLUBS &amp; CIRCLES</p>
+  <h1>クラブ・サークル</h1>
+</section>
+
+<section>
+  <div class="container">
+    <p class="lead-text reveal">桜陵女子大学は、学びだけでなく課外活動も活発な「文武両道」の大学です。全国大会で活躍する強化クラブから、気軽に楽しめるサークルまで、多彩な団体が日々いきいきと活動しています。あなたの「好き」や「夢中」が、きっと見つかります。</p>
+  </div>
+</section>
+
+<!-- 数字で見る -->
+<section class="section-bg-soft">
+  <div class="container">
+    <div class="section-title reveal"><p class="en">Data</p><h2>数字で見る課外活動</h2></div>
+    <div class="data-grid">
+      <div class="data-item reveal" data-delay="1"><div class="num"><span data-count="58">0</span><small>団体</small></div><div class="label">クラブ・サークル総数</div></div>
+      <div class="data-item reveal" data-delay="2"><div class="num"><span data-count="2">0</span><small>部</small></div><div class="label">全国大会常連の強化クラブ</div></div>
+      <div class="data-item reveal" data-delay="3"><div class="num"><span data-count="75">0</span><small>%</small></div><div class="label">学生の課外活動参加率</div></div>
+      <div class="data-item reveal" data-delay="4"><div class="num"><span data-count="12">0</span><small>回</small></div><div class="label">バスケ部 全国大会出場</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 強化クラブ -->
+<section>
+  <div class="container">
+    <div class="section-title reveal"><p class="en">Flagship</p><h2>全国レベルの強化クラブ</h2></div>
+    <div class="flagship-grid">
+      <a href="basketball.html" class="flagship-card reveal" data-delay="1">
+        <div class="flagship-visual img-ph" data-img="../assets/img/club-basketball.jpg"><span class="img-ph-icon">🏀</span><span class="badge">全国大会常連</span></div>
+        <div class="flagship-body"><h3>女子バスケットボール部</h3><p>全国大会の常連校として、毎年上位進出を果たす本学の看板クラブ。強豪ながら、初心者をサポートする体制も整っています。</p><span class="more">詳しく見る →</span></div>
+      </a>
+      <a href="cheerleading.html" class="flagship-card reveal" data-delay="2">
+        <div class="flagship-visual img-ph" data-img="../assets/img/club-cheer.jpg"><span class="img-ph-icon">📣</span><span class="badge">全国大会常連</span></div>
+        <div class="flagship-body"><h3>チアリーダー部</h3><p>全国大会で輝く演技を披露する強豪チア。観客を魅了する華やかなパフォーマンスと、強い絆が自慢のクラブです。</p><span class="more">詳しく見る →</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 体育会系 -->
+<section class="section-bg-soft">
+  <div class="container">
+    <div class="club-cat">
+      <h3 class="club-cat-title reveal">体育会系クラブ</h3>
+      <div class="club-list">
+        <a href="basketball.html" class="club-chip linked reveal"><span class="ic">🏀</span>女子バスケットボール部<span class="tag-strong">強化</span><span class="arrow">→</span></a>
+        <a href="cheerleading.html" class="club-chip linked reveal"><span class="ic">📣</span>チアリーダー部<span class="tag-strong">強化</span><span class="arrow">→</span></a>
+        <a href="swimming.html" class="club-chip linked reveal"><span class="ic">🏊‍♀️</span>水泳部<span class="arrow">→</span></a>
+        <a href="tennis.html" class="club-chip linked reveal"><span class="ic">🎾</span>テニス部<span class="arrow">→</span></a>
+        <div class="club-chip reveal"><span class="ic">🏐</span>バレーボール部</div>
+        <div class="club-chip reveal"><span class="ic">🏸</span>バドミントン部</div>
+        <div class="club-chip reveal"><span class="ic">🏃‍♀️</span>陸上競技部</div>
+        <div class="club-chip reveal"><span class="ic">⛳</span>ゴルフ部</div>
+        <div class="club-chip reveal"><span class="ic">🤸‍♀️</span>新体操部</div>
+        <div class="club-chip reveal"><span class="ic">🥎</span>ソフトボール部</div>
+        <div class="club-chip reveal"><span class="ic">🏑</span>ホッケー部</div>
+        <div class="club-chip reveal"><span class="ic">🧘‍♀️</span>ヨガ・フィットネスサークル</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 文化系 -->
+<section>
+  <div class="container">
+    <div class="club-cat">
+      <h3 class="club-cat-title reveal">文化系クラブ・サークル</h3>
+      <div class="club-list">
+        <a href="dance.html" class="club-chip linked reveal"><span class="ic">💃</span>ダンスサークル BLOOM<span class="tag-pop">人気</span><span class="arrow">→</span></a>
+        <a href="lightmusic.html" class="club-chip linked reveal"><span class="ic">🎵</span>軽音楽サークル<span class="tag-pop">人気</span><span class="arrow">→</span></a>
+        <a href="photo.html" class="club-chip linked reveal"><span class="ic">📷</span>写真サークル ひとひら<span class="arrow">→</span></a>
+        <div class="club-chip reveal"><span class="ic">🎻</span>管弦楽団</div>
+        <div class="club-chip reveal"><span class="ic">🎤</span>合唱団</div>
+        <div class="club-chip reveal"><span class="ic">🎭</span>演劇部</div>
+        <div class="club-chip reveal"><span class="ic">🎨</span>美術部</div>
+        <div class="club-chip reveal"><span class="ic">🍵</span>茶道部</div>
+        <div class="club-chip reveal"><span class="ic">🌸</span>華道部</div>
+        <div class="club-chip reveal"><span class="ic">👘</span>箏曲部</div>
+        <div class="club-chip reveal"><span class="ic">📚</span>文芸部</div>
+        <div class="club-chip reveal"><span class="ic">🍳</span>料理研究会</div>
+        <div class="club-chip reveal"><span class="ic">🌍</span>国際交流サークル</div>
+        <div class="club-chip reveal"><span class="ic">🎬</span>映像制作サークル</div>
+        <div class="club-chip reveal"><span class="ic">🤝</span>ボランティアサークル</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><p class="name">桜陵女子大学</p><address>〒000-0000<br>天府都 白金ヶ丘区 一丁目<br>OURYO WOMEN'S UNIVERSITY</address></div><div class="footer-links"><div><h4>大学について</h4><ul><li><a href="../about/message.html">学長挨拶</a></li><li><a href="../about/history.html">建学の精神・沿革</a></li><li><a href="clubs.html">クラブ・サークル</a></li></ul></div><div><h4>受験生の方へ</h4><ul><li><a href="../academics.html">学部・大学院</a></li><li><a href="../admissions/opencampus.html">オープンキャンパス</a></li><li><a href="../admissions/request.html">資料請求</a></li></ul></div><div><h4>強化・人気クラブ</h4><ul><li><a href="basketball.html">女子バスケットボール部</a></li><li><a href="cheerleading.html">チアリーダー部</a></li><li><a href="festival.html">桜陵祭（学園祭）</a></li></ul></div></div></div><div class="footer-bottom">&copy; 2026 Ouryo Women's University. All Rights Reserved.</div></div></footer>
+
+<script src="../assets/common.js"></script>
+</body>
+</html>
