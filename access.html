@@ -1,0 +1,134 @@
+<!-- File: access.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>交通アクセス | 桜陵女子大学</title>
+<meta name="description" content="桜陵女子大学（天府都白金ヶ丘区一丁目）への交通アクセス・キャンパスマップのご案内。">
+<link rel="stylesheet" href="assets/common.css">
+<style>
+.page-hero { background: linear-gradient(135deg, #d9a7ae 0%, #b76e79 60%, #8e4d57 100%); color: #fff; text-align: center; padding: 4rem 0; }
+.page-hero h1 { font-family: var(--font-mincho); font-size: 2.2rem; letter-spacing: 0.1em; margin-bottom: 0.6rem; text-shadow: 0 2px 12px rgba(0,0,0,0.2); }
+.page-hero .en { font-size: 0.8rem; letter-spacing: 0.25em; opacity: 0.9; }
+
+/* 地図プレースホルダー */
+.map-area { max-width: 960px; margin: 0 auto; }
+.map-ph { width: 100%; height: 380px; border-radius: 14px; font-size: 3.5rem; box-shadow: var(--shadow); }
+
+/* アクセス方法 */
+.access-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; max-width: 960px; margin: 0 auto; }
+.access-card { background-color: var(--color-bg); border: 1px solid var(--color-border); border-radius: 12px; padding: 2rem 1.6rem; box-shadow: var(--shadow); text-align: center; border-top: 4px solid var(--color-primary); }
+.access-card .ac-icon { font-size: 2.2rem; margin-bottom: 0.8rem; }
+.access-card h3 { font-family: var(--font-mincho); color: var(--color-accent); font-size: 1.15rem; margin-bottom: 0.8rem; }
+.access-card p { font-size: 0.88rem; color: var(--color-text-light); }
+
+/* 所在地情報 */
+.info-box { max-width: 720px; margin: 0 auto; background-color: var(--color-bg); border: 1px solid var(--color-border); border-radius: 12px; padding: 2rem; box-shadow: var(--shadow); }
+.info-box dl { display: grid; grid-template-columns: 120px 1fr; gap: 0.8rem 1rem; }
+.info-box dt { font-family: var(--font-mincho); color: var(--color-primary-dark); font-size: 0.9rem; }
+.info-box dd { font-size: 0.92rem; }
+
+@media (max-width: 900px) { .access-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .info-box dl { grid-template-columns: 1fr; gap: 0.2rem 0; } .info-box dd { margin-bottom: 0.8rem; } .page-hero h1 { font-size: 1.7rem; } section { padding: 3.5rem 0; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="site-logo">桜陵女子大学<span>OURYO WOMEN'S UNIVERSITY</span></a>
+    <nav class="global-nav"><ul>
+      <li><a href="about/message.html">大学について</a></li>
+      <li><a href="academics.html">学部・大学院</a></li>
+      <li><a href="admissions/index.html">入試情報</a></li>
+      <li><a href="index.html#campuslife">キャンパスライフ</a></li>
+      <li><a href="#">就職・キャリア</a></li>
+    </ul></nav>
+    <div class="header-cta">
+      <a href="admissions/request.html" class="btn btn-outline">資料請求</a>
+      <a href="admissions/opencampus.html" class="btn btn-primary">オープンキャンパス</a>
+    </div>
+    <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="drawer-overlay"></div>
+<nav class="drawer" id="drawer" aria-hidden="true" aria-label="モバイルメニュー">
+  <div class="drawer-nav"><ul>
+    <li><a href="about/message.html">学長挨拶</a></li>
+    <li><a href="about/history.html">建学の精神・沿革</a></li>
+    <li><a href="academics.html">学部・大学院</a></li>
+    <li><a href="admissions/index.html">入試情報</a></li>
+    <li><a href="access.html">交通アクセス</a></li>
+    <li><a href="affiliated-school.html">併設校・付属高校</a></li>
+  </ul></div>
+  <div class="drawer-cta">
+    <a href="admissions/request.html" class="btn btn-outline">資料請求</a>
+    <a href="admissions/opencampus.html" class="btn btn-primary">オープンキャンパス予約</a>
+  </div>
+</nav>
+
+<div class="breadcrumb"><div class="container"><a href="index.html">ホーム</a> ＞ 交通アクセス</div></div>
+
+<section class="page-hero">
+  <p class="en">ACCESS</p>
+  <h1>交通アクセス</h1>
+</section>
+
+<!-- 地図 -->
+<section>
+  <div class="container">
+    <div class="map-area">
+      <div class="map-ph img-ph reveal" data-img="assets/img/campus-map.jpg"><span class="img-ph-icon">🗺️</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 所在地情報 -->
+<section class="section-bg-soft">
+  <div class="container">
+    <div class="section-title reveal"><p class="en">Location</p><h2>所在地</h2></div>
+    <div class="info-box reveal">
+      <dl>
+        <dt>大学名</dt><dd>桜陵女子大学（OURYO WOMEN'S UNIVERSITY）</dd>
+        <dt>住所</dt><dd>〒000-0000　天府都 白金ヶ丘区 一丁目</dd>
+        <dt>代表電話</dt><dd>000-000-0000（平日 9:00 - 17:00）</dd>
+        <dt>キャンパス</dt><dd>白金ヶ丘キャンパス（全学部・併設高校）</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- アクセス方法 -->
+<section>
+  <div class="container">
+    <div class="section-title reveal"><p class="en">How to come</p><h2>交通機関のご案内</h2></div>
+    <div class="access-grid">
+      <div class="access-card reveal" data-delay="1">
+        <div class="ac-icon">🚃</div>
+        <h3>電車でお越しの方</h3>
+        <p>天府メトロ「白金ヶ丘」駅 下車、2番出口より徒歩約5分。各線が乗り入れる主要駅から乗り換えなしでアクセスできます。</p>
+      </div>
+      <div class="access-card reveal" data-delay="2">
+        <div class="ac-icon">🚌</div>
+        <h3>バスでお越しの方</h3>
+        <p>天府交通バス「桜陵女子大前」停留所すぐ。中心市街地より約20分間隔で運行しています。</p>
+      </div>
+      <div class="access-card reveal" data-delay="3">
+        <div class="ac-icon">🚗</div>
+        <h3>お車でお越しの方</h3>
+        <p>白金ヶ丘ICより約10分。来客用駐車場をご用意していますが、台数に限りがございます。公共交通機関のご利用を推奨します。</p>
+      </div>
+    </div>
+    <p class="lead-text reveal" style="font-size:0.8rem; color:var(--color-text-light); margin-top:2rem;">
+      ※ 駅名・路線・所要時間はすべて架空の設定です。
+    </p>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><p class="name">桜陵女子大学</p><address>〒000-0000<br>天府都 白金ヶ丘区 一丁目<br>OURYO WOMEN'S UNIVERSITY</address></div><div class="footer-links"><div><h4>大学について</h4><ul><li><a href="about/message.html">学長挨拶</a></li><li><a href="about/history.html">建学の精神・沿革</a></li><li><a href="access.html">交通アクセス</a></li></ul></div><div><h4>受験生の方へ</h4><ul><li><a href="academics.html">学部・大学院</a></li><li><a href="admissions/opencampus.html">オープンキャンパス</a></li><li><a href="admissions/request.html">資料請求</a></li></ul></div><div><h4>関連校</h4><ul><li><a href="affiliated-school.html">桜陵女子高等学校</a></li></ul></div></div></div><div class="footer-bottom">&copy; 2026 Ouryo Women's University. All Rights Reserved.</div></div></footer>
+
+<script src="assets/common.js"></script>
+</body>
+</html>
