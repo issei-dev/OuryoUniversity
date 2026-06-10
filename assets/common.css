@@ -1,6 +1,8 @@
 /* File: assets/common.css */
 
-/* ===== カラー・フォント変数 ===== */
+/* =========================================================
+   1. カラー・フォント変数
+   ========================================================= */
 :root {
   --color-primary: #b76e79;
   --color-primary-dark: #8e4d57;
@@ -13,9 +15,12 @@
   --font-mincho: "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
   --font-gothic: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
   --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 10px 30px rgba(183, 110, 121, 0.18);
 }
 
-/* ===== リセット・基本 ===== */
+/* =========================================================
+   2. リセット・基本
+   ========================================================= */
 * {
   margin: 0;
   padding: 0;
@@ -50,7 +55,9 @@ img {
   margin: 0 auto;
 }
 
-/* ===== ヘッダー ===== */
+/* =========================================================
+   3. ヘッダー
+   ========================================================= */
 .site-header {
   position: sticky;
   top: 0;
@@ -104,7 +111,9 @@ img {
   gap: 0.6rem;
 }
 
-/* ===== ボタン ===== */
+/* =========================================================
+   4. ボタン
+   ========================================================= */
 .btn {
   display: inline-block;
   padding: 0.6rem 1.4rem;
@@ -141,7 +150,15 @@ img {
   font-size: 0.95rem;
 }
 
-/* ===== パンくず ===== */
+.btn-disabled {
+  background-color: #cfc4bf;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   5. パンくず
+   ========================================================= */
 .breadcrumb {
   background-color: var(--color-bg-soft);
   padding: 0.8rem 0;
@@ -154,7 +171,9 @@ img {
   text-decoration: underline;
 }
 
-/* ===== セクション共通 ===== */
+/* =========================================================
+   6. セクション共通
+   ========================================================= */
 section {
   padding: 5rem 0;
 }
@@ -191,7 +210,256 @@ section {
   color: var(--color-text);
 }
 
-/* ===== フッター ===== */
+/* =========================================================
+   7. 共通ページヒーロー（下層ページ用）
+   ========================================================= */
+.page-hero {
+  background: linear-gradient(135deg, #d9a7ae 0%, #b76e79 60%, #8e4d57 100%);
+  color: #fff;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.page-hero h1 {
+  font-family: var(--font-mincho);
+  font-size: 2.2rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.6rem;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.page-hero .en {
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  opacity: 0.9;
+}
+
+/* =========================================================
+   8. 数字で見る（カウントアップ）共通
+   ========================================================= */
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.data-item {
+  padding: 1.5rem 1rem;
+}
+
+.data-item .num {
+  font-family: var(--font-mincho);
+  font-size: 2.6rem;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.data-item .num small {
+  font-size: 1rem;
+  margin-left: 0.2rem;
+}
+
+.data-item .label {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-top: 0.4rem;
+}
+
+/* =========================================================
+   9. 情報ボックス（活動情報・所在地など）共通
+   ========================================================= */
+.info-box {
+  max-width: 720px;
+  margin: 0 auto;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.info-box dl {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 0.9rem 1rem;
+}
+
+.info-box dt {
+  font-family: var(--font-mincho);
+  color: var(--color-primary-dark);
+  font-size: 0.9rem;
+}
+
+.info-box dd {
+  font-size: 0.92rem;
+}
+
+/* =========================================================
+   10. 実績タイムライン（クラブ）共通
+   ========================================================= */
+.record-list {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.record-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--color-border);
+  align-items: center;
+}
+
+.record-item:last-child {
+  border-bottom: none;
+}
+
+.record-year {
+  font-family: var(--font-mincho);
+  color: var(--color-primary);
+  font-size: 0.95rem;
+  white-space: nowrap;
+  min-width: 80px;
+}
+
+.record-medal {
+  font-size: 1.4rem;
+}
+
+.record-item p {
+  font-size: 0.95rem;
+}
+
+/* =========================================================
+   11. 年間スケジュールタイムライン（サークル）共通
+   ========================================================= */
+.tl-list {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.tl-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--color-border);
+  align-items: center;
+}
+
+.tl-item:last-child {
+  border-bottom: none;
+}
+
+.tl-month {
+  font-family: var(--font-mincho);
+  color: var(--color-primary);
+  font-size: 0.95rem;
+  min-width: 70px;
+  white-space: nowrap;
+}
+
+.tl-ic {
+  font-size: 1.4rem;
+}
+
+.tl-item p {
+  font-size: 0.95rem;
+}
+
+/* =========================================================
+   12. フォーム共通（資料請求・予約）
+   ========================================================= */
+.form-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+}
+
+.form-row {
+  margin-bottom: 1.6rem;
+}
+
+.form-row label {
+  display: block;
+  font-family: var(--font-mincho);
+  font-size: 0.9rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+.form-row label .req {
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 0.65rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+  font-family: var(--font-gothic);
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: var(--font-gothic);
+  color: var(--color-text);
+  background-color: #fff;
+  transition: border-color 0.2s;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.form-row textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-col2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.form-note {
+  font-size: 0.78rem;
+  color: var(--color-text-light);
+  margin-top: 0.4rem;
+}
+
+.form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+}
+
+.form-check input {
+  width: auto;
+  margin-top: 0.3rem;
+}
+
+.form-submit {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* =========================================================
+   13. フッター
+   ========================================================= */
 .site-footer {
   background-color: var(--color-accent);
   color: #d8dde6;
@@ -223,6 +491,7 @@ section {
 .footer-links {
   display: flex;
   gap: 3rem;
+  flex-wrap: wrap;
 }
 
 .footer-links h4 {
@@ -252,7 +521,9 @@ section {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* ===== スクロール連動アニメーション ===== */
+/* =========================================================
+   14. スクロール連動アニメーション
+   ========================================================= */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -293,7 +564,9 @@ section {
   }
 }
 
-/* ===== 画像プレースホルダー ===== */
+/* =========================================================
+   15. 画像プレースホルダー
+   ========================================================= */
 .img-ph {
   position: relative;
   background-color: var(--color-bg-soft);
@@ -307,7 +580,7 @@ section {
   overflow: hidden;
 }
 
-/* 画像未指定（is-empty）のときだけグラデーション地を表示 */
+/* 画像未指定（is-empty）時のグラデーション地 */
 .img-ph.is-empty {
   background-image: linear-gradient(135deg, #e8c9cd 0%, #b76e79 100%);
 }
@@ -327,7 +600,9 @@ section {
   to   { opacity: 1; }
 }
 
-/* ===== ハンバーガーボタン ===== */
+/* =========================================================
+   16. ハンバーガーボタン
+   ========================================================= */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -363,7 +638,9 @@ section {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ===== ドロワー ===== */
+/* =========================================================
+   17. ドロワー・オーバーレイ
+   ========================================================= */
 .drawer {
   position: fixed;
   top: 0;
@@ -418,7 +695,6 @@ section {
   padding: 0.9rem;
 }
 
-/* ===== オーバーレイ ===== */
 .drawer-overlay {
   position: fixed;
   inset: 0;
@@ -439,7 +715,9 @@ body.drawer-locked {
   overflow: hidden;
 }
 
-/* ===== レスポンシブ（共通） ===== */
+/* =========================================================
+   18. レスポンシブ（共通）
+   ========================================================= */
 @media (max-width: 900px) {
   .global-nav,
   .header-cta {
@@ -447,6 +725,9 @@ body.drawer-locked {
   }
   .menu-toggle {
     display: flex;
+  }
+  .data-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -458,12 +739,36 @@ body.drawer-locked {
   }
 }
 
+@media (max-width: 600px) {
+  .form-col2 {
+    grid-template-columns: 1fr;
+  }
+  .form-wrap {
+    padding: 1.8rem;
+  }
+  .info-box dl {
+    grid-template-columns: 1fr;
+    gap: 0.2rem 0;
+  }
+  .info-box dd {
+    margin-bottom: 0.7rem;
+  }
+}
+
 @media (max-width: 560px) {
+  .data-grid {
+    grid-template-columns: 1fr;
+  }
   .footer-top {
     flex-direction: column;
   }
   .footer-links {
     gap: 1.8rem;
-    flex-wrap: wrap;
+  }
+  .page-hero h1 {
+    font-size: 1.7rem;
+  }
+  section {
+    padding: 3.5rem 0;
   }
 }
