@@ -1,0 +1,174 @@
+<!-- File: admissions/request.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>資料請求 | 桜陵女子大学</title>
+<meta name="description" content="桜陵女子大学の大学案内・募集要項を無料でお届けします。資料請求はこちらのフォームから。">
+<link rel="stylesheet" href="../assets/common.css">
+<style>
+.page-hero { background: linear-gradient(135deg, #d9a7ae 0%, #b76e79 60%, #8e4d57 100%); color: #fff; text-align: center; padding: 4rem 0; }
+.page-hero h1 { font-family: var(--font-mincho); font-size: 2.2rem; letter-spacing: 0.1em; margin-bottom: 0.6rem; text-shadow: 0 2px 12px rgba(0,0,0,0.2); }
+.page-hero .en { font-size: 0.8rem; letter-spacing: 0.25em; opacity: 0.9; }
+
+.form-wrap { max-width: 720px; margin: 0 auto; background-color: var(--color-bg); border: 1px solid var(--color-border); border-radius: 14px; padding: 2.5rem; box-shadow: var(--shadow); }
+.form-row { margin-bottom: 1.6rem; }
+.form-row label { display: block; font-family: var(--font-mincho); font-size: 0.9rem; color: var(--color-primary-dark); margin-bottom: 0.5rem; }
+.form-row label .req { background-color: var(--color-primary); color: #fff; font-size: 0.65rem; padding: 0.1rem 0.5rem; border-radius: 4px; margin-left: 0.5rem; font-family: var(--font-gothic); }
+.form-row input, .form-row select, .form-row textarea {
+  width: 100%; padding: 0.8rem 1rem; border: 1px solid var(--color-border); border-radius: 8px;
+  font-size: 0.95rem; font-family: var(--font-gothic); color: var(--color-text); background-color: #fff;
+  transition: border-color 0.2s;
+}
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus { outline: none; border-color: var(--color-primary); }
+.form-row textarea { resize: vertical; min-height: 100px; }
+.form-col2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.form-note { font-size: 0.78rem; color: var(--color-text-light); margin-top: 0.4rem; }
+.form-check { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.88rem; }
+.form-check input { width: auto; margin-top: 0.3rem; }
+.form-submit { text-align: center; margin-top: 2rem; }
+.form-submit .btn { padding: 1rem 3rem; font-size: 1rem; }
+
+@media (max-width: 600px) {
+  .form-col2 { grid-template-columns: 1fr; }
+  .form-wrap { padding: 1.8rem; }
+  .page-hero h1 { font-size: 1.7rem; }
+  section { padding: 3.5rem 0; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../index.html" class="site-logo">桜陵女子大学<span>OURYO WOMEN'S UNIVERSITY</span></a>
+    <nav class="global-nav"><ul>
+      <li><a href="../about/message.html">大学について</a></li>
+      <li><a href="../academics.html">学部・大学院</a></li>
+      <li><a href="index.html">入試情報</a></li>
+      <li><a href="../index.html#campuslife">キャンパスライフ</a></li>
+      <li><a href="#">就職・キャリア</a></li>
+    </ul></nav>
+    <div class="header-cta">
+      <a href="request.html" class="btn btn-outline">資料請求</a>
+      <a href="opencampus.html" class="btn btn-primary">オープンキャンパス</a>
+    </div>
+    <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="drawer-overlay"></div>
+<nav class="drawer" id="drawer" aria-hidden="true" aria-label="モバイルメニュー">
+  <div class="drawer-nav"><ul>
+    <li><a href="../about/message.html">学長挨拶</a></li>
+    <li><a href="../about/history.html">建学の精神・沿革</a></li>
+    <li><a href="../academics.html">学部・大学院</a></li>
+    <li><a href="index.html">入試情報</a></li>
+    <li><a href="../affiliated-school.html">併設校・付属高校</a></li>
+  </ul></div>
+  <div class="drawer-cta">
+    <a href="request.html" class="btn btn-outline">資料請求</a>
+    <a href="opencampus.html" class="btn btn-primary">オープンキャンパス予約</a>
+  </div>
+</nav>
+
+<div class="breadcrumb"><div class="container"><a href="../index.html">ホーム</a> ＞ <a href="index.html">入試情報</a> ＞ 資料請求</div></div>
+
+<section class="page-hero">
+  <p class="en">REQUEST</p>
+  <h1>資料請求</h1>
+</section>
+
+<section>
+  <div class="container">
+    <p class="lead-text reveal">大学案内・募集要項を無料でお届けします。以下のフォームに必要事項をご入力ください。</p>
+  </div>
+</section>
+
+<section class="section-bg-soft" style="padding-top:0;">
+  <div class="container">
+    <form class="form-wrap reveal" action="#" method="post" novalidate>
+      <div class="form-row">
+        <label>お名前 <span class="req">必須</span></label>
+        <div class="form-col2">
+          <input type="text" name="last_name" placeholder="姓" required>
+          <input type="text" name="first_name" placeholder="名" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <label>ふりがな <span class="req">必須</span></label>
+        <div class="form-col2">
+          <input type="text" name="last_kana" placeholder="せい" required>
+          <input type="text" name="first_kana" placeholder="めい" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <label>メールアドレス <span class="req">必須</span></label>
+        <input type="email" name="email" placeholder="example@example.com" required>
+      </div>
+      <div class="form-row">
+        <label>郵便番号 <span class="req">必須</span></label>
+        <input type="text" name="zip" placeholder="000-0000" required>
+        <p class="form-note">資料をご郵送するため、正確にご入力ください。</p>
+      </div>
+      <div class="form-row">
+        <label>ご住所 <span class="req">必須</span></label>
+        <input type="text" name="address" placeholder="天府都 白金ヶ丘区 ……" required>
+      </div>
+      <div class="form-row">
+        <label>電話番号</label>
+        <input type="tel" name="tel" placeholder="000-0000-0000">
+      </div>
+      <div class="form-row">
+        <label>ご身分 <span class="req">必須</span></label>
+        <select name="status" required>
+          <option value="">選択してください</option>
+          <option>高校1年生</option>
+          <option>高校2年生</option>
+          <option>高校3年生</option>
+          <option>既卒生</option>
+          <option>保護者</option>
+          <option>高校教員</option>
+          <option>その他</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>ご関心のある学部</label>
+        <select name="faculty">
+          <option value="">選択してください</option>
+          <option>医学部</option>
+          <option>薬学部</option>
+          <option>看護学部</option>
+          <option>経済学部</option>
+          <option>国際学部</option>
+          <option>文学部</option>
+          <option>コミュニケーション学部</option>
+          <option>児童保育学部</option>
+          <option>生活科学部</option>
+          <option>未定・全般</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>ご質問・ご要望</label>
+        <textarea name="message" placeholder="ご自由にお書きください"></textarea>
+      </div>
+      <div class="form-row">
+        <label class="form-check">
+          <input type="checkbox" name="agree" required>
+          <span>個人情報の取り扱いに同意します。ご入力いただいた情報は、資料発送および本学からのご案内にのみ使用します。</span>
+        </label>
+      </div>
+      <div class="form-submit">
+        <button type="submit" class="btn btn-primary">この内容で資料請求する</button>
+        <p class="form-note" style="margin-top:1rem;">※ 本フォームは架空サイトのデモであり、実際には送信されません。</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><p class="name">桜陵女子大学</p><address>〒000-0000<br>天府都 白金ヶ丘区 一丁目<br>OURYO WOMEN'S UNIVERSITY</address></div><div class="footer-links"><div><h4>大学について</h4><ul><li><a href="../about/message.html">学長挨拶</a></li><li><a href="../about/history.html">建学の精神・沿革</a></li><li><a href="../affiliated-school.html">併設校・付属高校</a></li></ul></div><div><h4>受験生の方へ</h4><ul><li><a href="../academics.html">学部・大学院</a></li><li><a href="opencampus.html">オープンキャンパス</a></li><li><a href="request.html">資料請求</a></li></ul></div><div><h4>関連校</h4><ul><li><a href="../affiliated-school.html">桜陵女子高等学校</a></li></ul></div></div></div><div class="footer-bottom">&copy; 2026 Ouryo Women's University. All Rights Reserved.</div></div></footer>
+
+<script src="../assets/common.js"></script>
+</body>
+</html>
