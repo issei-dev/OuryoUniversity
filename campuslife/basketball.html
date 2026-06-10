@@ -48,6 +48,26 @@
 .club-cta p { font-weight: 300; margin-bottom: 2rem; }
 .club-cta .btn { background-color: #fff; color: var(--color-accent); font-weight: 500; }
 
+  /* 活動の様子ギャラリー */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .gallery-item {
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    font-size: 2.5rem;
+    transition: transform 0.25s;
+  }
+
+  .gallery-item:hover {
+    transform: scale(1.03);
+  }
+
 @media (max-width: 760px) {
   .voice-card, .voice-card:nth-child(even) { flex-direction: column; }
   .voice-visual { flex: none; width: 100%; min-height: 240px; }
