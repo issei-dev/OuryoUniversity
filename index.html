@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>桜陵女子大学 | Ouryo Women's University</title>
-<meta name="description" content="天府都白金ヶ丘区にある桜陵女子大学。医療系から実学系まで、女性の一生に寄り添う総合女子大学です。">
+<meta name="description" content="天府都白金ヶ丘区にある桜陵女子大学。医療系から実学系まで、女性の一生に寄り添う総合女子大学です。全国大会常連の強化クラブなど、課外活動も活発です。">
 <link rel="stylesheet" href="assets/common.css">
 <style>
   /* ===== トップページ固有 ===== */
@@ -23,7 +23,6 @@
     overflow: hidden;
   }
 
-  /* 背景画像が入ったときに重ねる暗幕 */
   .hero-top::after {
     content: "";
     position: absolute;
@@ -209,6 +208,69 @@
     transform: scale(1.03);
   }
 
+  /* クラブ・サークル紹介 */
+  .club-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .club-feature-card {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s, box-shadow 0.25s;
+    display: block;
+    color: inherit;
+  }
+
+  .club-feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(183, 110, 121, 0.2);
+  }
+
+  .cf-visual {
+    position: relative;
+    height: 180px;
+    font-size: 3.5rem;
+  }
+
+  .cf-badge {
+    position: absolute;
+    top: 0.8rem;
+    left: 0.8rem;
+    background-color: var(--color-accent);
+    color: #fff;
+    font-size: 0.65rem;
+    padding: 0.25rem 0.8rem;
+    border-radius: 999px;
+    letter-spacing: 0.05em;
+  }
+
+  .cf-badge.cf-popular {
+    background-color: #c2563f;
+  }
+
+  .cf-body {
+    padding: 1.4rem 1.5rem;
+  }
+
+  .cf-body h3 {
+    font-family: var(--font-mincho);
+    font-size: 1.1rem;
+    color: var(--color-accent);
+    margin-bottom: 0.4rem;
+  }
+
+  .cf-body p {
+    font-size: 0.82rem;
+    color: var(--color-text-light);
+  }
+
   /* 受験生バナー */
   .admission-banner {
     background: linear-gradient(135deg, var(--color-accent) 0%, #2d4d7a 100%);
@@ -255,6 +317,9 @@
     .gallery-grid {
       grid-template-columns: repeat(2, 1fr);
     }
+    .club-feature-grid {
+      grid-template-columns: 1fr;
+    }
     .hero-top-content .slogan {
       font-size: 2rem;
     }
@@ -292,8 +357,8 @@
         <li><a href="about/message.html">大学について</a></li>
         <li><a href="academics.html">学部・大学院</a></li>
         <li><a href="admissions/index.html">入試情報</a></li>
-        <li><a href="#campuslife">キャンパスライフ</a></li>
-        <li><a href="#" >就職・キャリア</a></li>
+        <li><a href="campuslife/clubs.html">キャンパスライフ</a></li>
+        <li><a href="#">就職・キャリア</a></li>
       </ul>
     </nav>
     <div class="header-cta">
@@ -315,7 +380,8 @@
       <li><a href="about/history.html">建学の精神・沿革</a></li>
       <li><a href="academics.html">学部・大学院</a></li>
       <li><a href="admissions/index.html">入試情報</a></li>
-      <li><a href="#campuslife">キャンパスライフ</a></li>
+      <li><a href="campuslife/clubs.html">クラブ・サークル</a></li>
+      <li><a href="access.html">交通アクセス</a></li>
       <li><a href="affiliated-school.html">併設校・付属高校</a></li>
     </ul>
   </div>
@@ -359,6 +425,11 @@
         <span class="news-date">2026.05.10</span>
         <span class="news-cat">お知らせ</span>
         <p>看護学部の新カリキュラムに関する説明会を開催します。</p>
+      </li>
+      <li class="news-item reveal" data-delay="3">
+        <span class="news-date">2026.04.28</span>
+        <span class="news-cat">クラブ</span>
+        <p>女子バスケットボール部が全日本大学女子選手権で優勝しました。</p>
       </li>
     </ul>
   </div>
@@ -438,6 +509,37 @@
   </div>
 </section>
 
+<!-- ===== クラブ・サークル ===== -->
+<section>
+  <div class="container">
+    <div class="section-title reveal">
+      <p class="en">Clubs &amp; Circles</p>
+      <h2>文武両道のキャンパス</h2>
+    </div>
+    <p class="lead-text reveal" data-delay="1" style="margin-bottom:3rem;">
+      全国大会常連の強化クラブから、初心者歓迎の人気サークルまで。
+      学びと両立しながら、夢中になれる場所がここにあります。
+    </p>
+    <div class="club-feature-grid">
+      <a href="campuslife/basketball.html" class="club-feature-card reveal" data-delay="1">
+        <div class="cf-visual img-ph" data-img="assets/img/club-basketball.jpg"><span class="img-ph-icon">🏀</span><span class="cf-badge">全国大会常連</span></div>
+        <div class="cf-body"><h3>女子バスケットボール部</h3><p>全国の舞台で輝く、本学の看板クラブ。</p></div>
+      </a>
+      <a href="campuslife/cheerleading.html" class="club-feature-card reveal" data-delay="2">
+        <div class="cf-visual img-ph" data-img="assets/img/club-cheer.jpg"><span class="img-ph-icon">📣</span><span class="cf-badge">全国大会常連</span></div>
+        <div class="cf-body"><h3>チアリーダー部</h3><p>華やかな演技で、全国大会の常連。</p></div>
+      </a>
+      <a href="campuslife/dance.html" class="club-feature-card reveal" data-delay="3">
+        <div class="cf-visual img-ph" data-img="assets/img/club-dance.jpg"><span class="img-ph-icon">💃</span><span class="cf-badge cf-popular">人気サークル</span></div>
+        <div class="cf-body"><h3>ダンスサークル BLOOM</h3><p>初心者歓迎。学内最大級の人気サークル。</p></div>
+      </a>
+    </div>
+    <div style="text-align:center; margin-top:2.5rem;" class="reveal">
+      <a href="campuslife/clubs.html" class="btn btn-primary btn-lg">クラブ・サークル一覧を見る</a>
+    </div>
+  </div>
+</section>
+
 <!-- ===== 受験生バナー ===== -->
 <section class="admission-banner">
   <div class="container reveal">
@@ -468,6 +570,7 @@
           <ul>
             <li><a href="about/message.html">学長挨拶</a></li>
             <li><a href="about/history.html">建学の精神・沿革</a></li>
+            <li><a href="access.html">交通アクセス</a></li>
             <li><a href="affiliated-school.html">併設校・付属高校</a></li>
           </ul>
         </div>
@@ -478,6 +581,14 @@
             <li><a href="admissions/index.html">入試情報</a></li>
             <li><a href="admissions/opencampus.html">オープンキャンパス</a></li>
             <li><a href="admissions/request.html">資料請求</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>キャンパスライフ</h4>
+          <ul>
+            <li><a href="campuslife/clubs.html">クラブ・サークル</a></li>
+            <li><a href="campuslife/basketball.html">女子バスケットボール部</a></li>
+            <li><a href="campuslife/cheerleading.html">チアリーダー部</a></li>
           </ul>
         </div>
         <div>
