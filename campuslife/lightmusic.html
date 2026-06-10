@@ -1,0 +1,175 @@
+<!-- File: campuslife/lightmusic.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>軽音楽サークル «SOUND POCKET» | 桜陵女子大学</title>
+<meta name="description" content="桜陵女子大学の軽音楽サークル「SOUND POCKET」。初心者歓迎・ライブ活動が活発な、音楽好きが集まる人気サークルです。">
+<link rel="stylesheet" href="../assets/common.css">
+<style>
+.club-hero { position: relative; height: 420px; background: linear-gradient(135deg, #e88a5a 0%, #c2563f 50%, #7a2e3a 100%); color: #fff; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
+.club-hero::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.2); z-index: 0; }
+.club-hero-content { position: relative; z-index: 1; padding: 0 1rem; }
+.club-hero .en { font-size: 0.8rem; letter-spacing: 0.3em; opacity: 0.9; margin-bottom: 0.8rem; }
+.club-hero h1 { font-family: var(--font-mincho); font-size: 2.2rem; letter-spacing: 0.06em; margin-bottom: 1rem; text-shadow: 0 2px 14px rgba(0,0,0,0.3); }
+.club-hero .catch { font-size: 1.15rem; letter-spacing: 0.1em; font-weight: 300; }
+.intro-text { max-width: 760px; margin: 0 auto; text-align: center; font-size: 1.05rem; }
+.charm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
+.charm-card { background-color: var(--color-bg); border: 1px solid var(--color-border); border-radius: 12px; padding: 2.2rem 1.6rem; text-align: center; box-shadow: var(--shadow); transition: transform 0.25s, box-shadow 0.25s; }
+.charm-card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(183,110,121,0.18); }
+.charm-card .ic { font-size: 2.2rem; margin-bottom: 0.8rem; }
+.charm-card h3 { font-family: var(--font-mincho); color: var(--color-accent); font-size: 1.1rem; margin-bottom: 0.6rem; }
+.charm-card p { font-size: 0.85rem; color: var(--color-text-light); }
+.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 1000px; margin: 0 auto; }
+.gallery-item { aspect-ratio: 1/1; border-radius: 10px; font-size: 2.5rem; transition: transform 0.25s; }
+.gallery-item:hover { transform: scale(1.03); }
+.timeline { max-width: 720px; margin: 0 auto; }
+.tl-item { display: flex; gap: 1.5rem; padding: 1.1rem 0; border-bottom: 1px solid var(--color-border); align-items: center; }
+.tl-month { font-family: var(--font-mincho); color: var(--color-primary); font-size: 0.95rem; min-width: 70px; white-space: nowrap; }
+.tl-ic { font-size: 1.4rem; }
+.tl-item p { font-size: 0.95rem; }
+.info-box { max-width: 720px; margin: 0 auto; background-color: var(--color-bg); border: 1px solid var(--color-border); border-radius: 12px; padding: 2rem; box-shadow: var(--shadow); }
+.info-box dl { display: grid; grid-template-columns: 130px 1fr; gap: 0.9rem 1rem; }
+.info-box dt { font-family: var(--font-mincho); color: var(--color-primary-dark); font-size: 0.9rem; }
+.info-box dd { font-size: 0.92rem; }
+.voice-list { max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 2rem; }
+.voice-card { background-color: var(--color-bg); border: 1px solid var(--color-border); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); display: flex; }
+.voice-card:nth-child(even) { flex-direction: row-reverse; }
+.voice-visual { position: relative; flex: 0 0 40%; min-height: 300px; display: flex; align-items: center; justify-content: center; font-size: 6rem; }
+.voice-visual .voice-meta { position: absolute; left: 0; bottom: 0; width: 100%; padding: 1.8rem 1.4rem 1.1rem; background: linear-gradient(to top, rgba(31,58,95,0.85) 0%, rgba(31,58,95,0) 100%); color: #fff; }
+.voice-visual .voice-meta .name { font-family: var(--font-mincho); font-size: 1.2rem; }
+.voice-visual .voice-meta .belong { font-size: 0.78rem; opacity: 0.95; margin-top: 0.2rem; }
+.voice-body-wrap { flex: 1; padding: 2rem; display: flex; flex-direction: column; justify-content: center; }
+.voice-title { font-family: var(--font-mincho); color: var(--color-primary-dark); font-size: 1.15rem; margin-bottom: 0.8rem; border-left: 4px solid var(--color-primary); padding-left: 0.7rem; }
+.voice-body { font-size: 0.92rem; }
+.club-cta { background: linear-gradient(135deg, #c2563f 0%, #7a2e3a 100%); color: #fff; text-align: center; }
+.club-cta h2 { font-family: var(--font-mincho); font-size: 1.6rem; margin-bottom: 1rem; }
+.club-cta p { font-weight: 300; margin-bottom: 2rem; }
+.club-cta .btn { background-color: #fff; color: #7a2e3a; font-weight: 500; }
+@media (max-width: 900px) { .charm-grid { grid-template-columns: 1fr; } .gallery-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 760px) { .voice-card, .voice-card:nth-child(even) { flex-direction: column; } .voice-visual { flex: none; width: 100%; min-height: 240px; } .info-box dl { grid-template-columns: 1fr; gap: 0.2rem 0; } .info-box dd { margin-bottom: 0.7rem; } .club-hero h1 { font-size: 1.7rem; } section { padding: 3.5rem 0; } }
+@media (max-width: 560px) { .gallery-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../index.html" class="site-logo">桜陵女子大学<span>OURYO WOMEN'S UNIVERSITY</span></a>
+    <nav class="global-nav"><ul>
+      <li><a href="../about/message.html">大学について</a></li>
+      <li><a href="../academics.html">学部・大学院</a></li>
+      <li><a href="../admissions/index.html">入試情報</a></li>
+      <li><a href="clubs.html">キャンパスライフ</a></li>
+      <li><a href="#">就職・キャリア</a></li>
+    </ul></nav>
+    <div class="header-cta">
+      <a href="../admissions/request.html" class="btn btn-outline">資料請求</a>
+      <a href="../admissions/opencampus.html" class="btn btn-primary">オープンキャンパス</a>
+    </div>
+    <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="drawer-overlay"></div>
+<nav class="drawer" id="drawer" aria-hidden="true" aria-label="モバイルメニュー">
+  <div class="drawer-nav"><ul>
+    <li><a href="../about/message.html">学長挨拶</a></li>
+    <li><a href="../academics.html">学部・大学院</a></li>
+    <li><a href="clubs.html">クラブ・サークル</a></li>
+    <li><a href="dance.html">ダンスサークル BLOOM</a></li>
+    <li><a href="lightmusic.html">軽音楽サークル</a></li>
+  </ul></div>
+  <div class="drawer-cta">
+    <a href="../admissions/request.html" class="btn btn-outline">資料請求</a>
+    <a href="../admissions/opencampus.html" class="btn btn-primary">オープンキャンパス予約</a>
+  </div>
+</nav>
+
+<div class="breadcrumb"><div class="container"><a href="../index.html">ホーム</a> ＞ <a href="clubs.html">クラブ・サークル</a> ＞ 軽音楽サークル SOUND POCKET</div></div>
+
+<section class="club-hero img-ph" data-img="../assets/img/music-hero.jpg">
+  <div class="club-hero-content">
+    <p class="en">LIGHT MUSIC «SOUND POCKET»</p>
+    <h1>軽音楽サークル SOUND POCKET</h1>
+    <p class="catch">好きな音楽を、好きな仲間と。</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title reveal"><p class="en">About</p><h2>サークル紹介</h2></div>
+    <p class="intro-text reveal" data-delay="1">「SOUND POCKET（サウンドポケット）」は、音楽が好きな仲間が集まる人気の軽音サークルです。J-POP、ロック、ボカロ、アニソンまで、ジャンルは自由自在。学内のライブイベントや学園祭でのステージを目標に、思い思いのバンドを組んで活動しています。メンバーの半数以上が楽器初心者からのスタート。「音楽をやってみたい」という気持ちひとつで、新しい仲間と最高のステージを目指せる、あたたかい居場所です。</p>
+  </div>
+</section>
+
+<section class="section-bg-soft">
+  <div class="container">
+    <div class="section-title reveal"><p class="en">Charm</p><h2>SOUND POCKETの3つの魅力</h2></div>
+    <div class="charm-grid">
+      <div class="charm-card reveal" data-delay="1"><div class="ic">🔰</div><h3>初心者歓迎</h3><p>楽器初心者でも大丈夫。先輩や経験者が丁寧にサポートし、機材の貸し出しもあります。</p></div>
+      <div class="charm-card reveal" data-delay="2"><div class="ic">🎤</div><h3>ライブ活動が活発</h3><p>年に複数回のライブイベントを開催。ステージで演奏する達成感を、何度も味わえます。</p></div>
+      <div class="charm-card reveal" data-delay="3"><div class="ic">🎸</div><h3>自由なバンド編成</h3><p>好きな仲間と自由にバンドを結成。複数バンドの掛け持ちもOKで、幅広く楽しめます。</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title reveal"><p class="en">Gallery</p><h2>活動の様子</h2></div>
+    <div class="gallery-grid">
+      <div class="gallery-item img-ph reveal" data-img="../assets/img/music-g1.jpg"><span class="img-ph-icon">🎸</span></div>
+      <div class="gallery-item img-ph reveal" data-delay="1" data-img="../assets/img/music-g2.jpg"><span class="img-ph-icon">🥁</span></div>
+      <div class="gallery-item img-ph reveal" data-delay="2" data-img="../assets/img/music-g3.jpg"><span class="img-ph-icon">🎤</span></div>
+      <div class="gallery-item img-ph reveal" data-delay="3" data-img="../assets/img/music-g4.jpg"><span class="img-ph-icon">🎹</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-bg-soft">
+  <div class="container">
+    <div class="section-title reveal"><p class="en">Schedule</p><h2>年間スケジュール</h2></div>
+    <div class="timeline">
+      <div class="tl-item reveal"><span class="tl-month">4月</span><span class="tl-ic">🌸</span><p>新歓ライブ・バンドメンバー募集</p></div>
+      <div class="tl-item reveal"><span class="tl-month">6月</span><span class="tl-ic">🎶</span><p>初夏のスタジオライブ</p></div>
+      <div class="tl-item reveal"><span class="tl-month">8月</span><span class="tl-ic">🏖</span><p>夏合宿（バンド練習・新曲づくり）</p></div>
+      <div class="tl-item reveal"><span class="tl-month">11月</span><span class="tl-ic">🎉</span><p>桜陵祭（学園祭）野外ステージ出演</p></div>
+      <div class="tl-item reveal"><span class="tl-month">2月</span><span class="tl-ic">🎤</span><p>卒業ライブ・3年生送別ステージ</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title reveal"><p class="en">Activity</p><h2>活動情報</h2></div>
+    <div class="info-box reveal">
+      <dl>
+        <dt>活動場所</dt><dd>白金ヶ丘キャンパス 学生会館 音楽スタジオ</dd>
+        <dt>活動日</dt><dd>バンドごとに自由（週1〜数日）</dd>
+        <dt>メンバー数</dt><dd>約70名</dd>
+        <dt>初心者の割合</dt><dd>約半数（楽器初挑戦が多数）</dd>
+        <dt>設備</dt><dd>防音スタジオ・各種機材の貸し出しあり</dd>
+        <dt>雰囲気</dt><dd>音楽好きが集う、自由でアットホーム</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="section-bg-soft">
+  <div class="container">
+    <div class="section-title reveal"><p class="en">Member's Voice</p><h2>メンバーの声</h2></div>
+    <div class="voice-list">
+      <div class="voice-card reveal"><div class="voice-visual img-ph" data-img="../assets/img/music-voice1.jpg"><span class="img-ph-icon">🎤</span><div class="voice-meta"><p class="name">村上 ひなた さん</p><p class="belong">コミュニケーション学部 3年／代表</p></div></div><div class="voice-body-wrap"><p class="voice-title">ステージに立つ瞬間が、たまらない。</p><p class="voice-body">入学してギターを始めましたが、先輩に教わりながら、今では学園祭の大きなステージで演奏しています。仲間と一つの曲を作り上げて、お客さんが盛り上がってくれたときの感動は忘れられません。音楽を通じて、かけがえのない友達ができました。</p></div></div>
+      <div class="voice-card reveal"><div class="voice-visual img-ph" data-img="../assets/img/music-voice2.jpg"><span class="img-ph-icon">🥁</span><div class="voice-meta"><p class="name">遠藤 まな さん</p><p class="belong">生活科学部 2年</p></div></div><div class="voice-body-wrap"><p class="voice-title">自由に、好きな音楽を楽しめる。</p><p class="voke-body">ドラムは未経験でしたが、機材も借りられて気軽に始められました。いくつかのバンドを掛け持ちして、いろんなジャンルに挑戦しています。練習の頻度も自分で調整できるので、学業ともしっかり両立できているのが嬉しいです。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="club-cta"><div class="container reveal"><h2>あなたの音を、ステージに。</h2><p>初心者も大歓迎。見学・体験は、オープンキャンパスでもご案内しています。</p><a href="../admissions/opencampus.html" class="btn btn-lg">オープンキャンパスで相談する</a></div></section>
+
+<footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><p class="name">桜陵女子大学</p><address>〒000-0000<br>天府都 白金ヶ丘区 一丁目<br>OURYO WOMEN'S UNIVERSITY</address></div><div class="footer-links"><div><h4>大学について</h4><ul><li><a href="../about/message.html">学長挨拶</a></li><li><a href="../academics.html">学部・大学院</a></li><li><a href="clubs.html">クラブ・サークル</a></li></ul></div><div><h4>受験生の方へ</h4><ul><li><a href="../admissions/index.html">入試情報</a></li><li><a href="../admissions/opencampus.html">オープンキャンパス</a></li><li><a href="../admissions/request.html">資料請求</a></li></ul></div><div><h4>クラブ・サークル</h4><ul><li><a href="dance.html">ダンスサークル BLOOM</a></li><li><a href="lightmusic.html">軽音楽サークル</a></li><li><a href="photo.html">写真サークル</a></li></ul></div></div></div><div class="footer-bottom">&copy; 2026 Ouryo Women's University. All Rights Reserved.</div></div></footer>
+
+<script src="../assets/common.js"></script>
+</body>
+</html>
