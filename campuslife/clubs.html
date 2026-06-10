@@ -33,12 +33,10 @@
 .club-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 3rem; }
 .club-chip { background-color: var(--color-bg); border: 1px solid var(--color-border); border-radius: 10px; padding: 1rem 1.2rem; font-size: 0.92rem; display: flex; align-items: center; gap: 0.6rem; transition: background-color 0.2s, transform 0.2s; color: inherit; }
 .club-chip:hover { background-color: var(--color-bg-soft); transform: translateY(-3px); }
-.club-chip.linked { border-color: var(--color-primary); }
+.club-chip.linked:hover { border-color: var(--color-primary); }
 .club-chip .ic { font-size: 1.3rem; }
 .club-chip .tag-strong { margin-left: auto; font-size: 0.65rem; background-color: var(--color-primary); color: #fff; padding: 0.1rem 0.5rem; border-radius: 4px; }
-.club-chip .tag-pop { margin-left: auto; font-size: 0.65rem; background-color: var(--color-accent); color: #fff; padding: 0.1rem 0.5rem; border-radius: 4px; }
-.club-chip .arrow { margin-left: auto; color: var(--color-primary); font-weight: 600; }
-.club-chip.linked .tag-strong + .arrow, .club-chip.linked .tag-pop + .arrow { margin-left: 0.4rem; }
+.club-chip .tag-popular { margin-left: auto; font-size: 0.65rem; background-color: #c2563f; color: #fff; padding: 0.1rem 0.5rem; border-radius: 4px; }
 
 @media (max-width: 900px) { .data-grid { grid-template-columns: repeat(2,1fr); } .flagship-grid { grid-template-columns: 1fr; } .club-list { grid-template-columns: repeat(2,1fr); } }
 @media (max-width: 560px) { .data-grid, .club-list { grid-template-columns: 1fr; } .page-hero h1 { font-size: 1.7rem; } section { padding: 3.5rem 0; } }
@@ -71,7 +69,6 @@
     <li><a href="../academics.html">学部・大学院</a></li>
     <li><a href="../admissions/index.html">入試情報</a></li>
     <li><a href="clubs.html">クラブ・サークル</a></li>
-    <li><a href="festival.html">桜陵祭（学園祭）</a></li>
     <li><a href="../affiliated-school.html">併設校・付属高校</a></li>
   </ul></div>
   <div class="drawer-cta">
@@ -129,10 +126,10 @@
     <div class="club-cat">
       <h3 class="club-cat-title reveal">体育会系クラブ</h3>
       <div class="club-list">
-        <a href="basketball.html" class="club-chip linked reveal"><span class="ic">🏀</span>女子バスケットボール部<span class="tag-strong">強化</span><span class="arrow">→</span></a>
-        <a href="cheerleading.html" class="club-chip linked reveal"><span class="ic">📣</span>チアリーダー部<span class="tag-strong">強化</span><span class="arrow">→</span></a>
-        <a href="swimming.html" class="club-chip linked reveal"><span class="ic">🏊‍♀️</span>水泳部<span class="arrow">→</span></a>
-        <a href="tennis.html" class="club-chip linked reveal"><span class="ic">🎾</span>テニス部<span class="arrow">→</span></a>
+        <a href="basketball.html" class="club-chip linked reveal"><span class="ic">🏀</span>女子バスケットボール部<span class="tag-strong">強化</span></a>
+        <a href="cheerleading.html" class="club-chip linked reveal"><span class="ic">📣</span>チアリーダー部<span class="tag-strong">強化</span></a>
+        <a href="swimming.html" class="club-chip linked reveal"><span class="ic">🏊‍♀️</span>水泳部</a>
+        <a href="tennis.html" class="club-chip linked reveal"><span class="ic">🎾</span>テニス部</a>
         <div class="club-chip reveal"><span class="ic">🏐</span>バレーボール部</div>
         <div class="club-chip reveal"><span class="ic">🏸</span>バドミントン部</div>
         <div class="club-chip reveal"><span class="ic">🏃‍♀️</span>陸上競技部</div>
@@ -152,9 +149,9 @@
     <div class="club-cat">
       <h3 class="club-cat-title reveal">文化系クラブ・サークル</h3>
       <div class="club-list">
-        <a href="dance.html" class="club-chip linked reveal"><span class="ic">💃</span>ダンスサークル BLOOM<span class="tag-pop">人気</span><span class="arrow">→</span></a>
-        <a href="lightmusic.html" class="club-chip linked reveal"><span class="ic">🎵</span>軽音楽サークル<span class="tag-pop">人気</span><span class="arrow">→</span></a>
-        <a href="photo.html" class="club-chip linked reveal"><span class="ic">📷</span>写真サークル ひとひら<span class="arrow">→</span></a>
+        <a href="lightmusic.html" class="club-chip linked reveal"><span class="ic">🎵</span>軽音楽サークル SOUND POCKET<span class="tag-popular">人気</span></a>
+        <a href="dance.html" class="club-chip linked reveal"><span class="ic">💃</span>ダンスサークル BLOOM<span class="tag-popular">人気</span></a>
+        <a href="photo.html" class="club-chip linked reveal"><span class="ic">📷</span>写真サークル ひとひら</a>
         <div class="club-chip reveal"><span class="ic">🎻</span>管弦楽団</div>
         <div class="club-chip reveal"><span class="ic">🎤</span>合唱団</div>
         <div class="club-chip reveal"><span class="ic">🎭</span>演劇部</div>
@@ -172,7 +169,7 @@
   </div>
 </section>
 
-<footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><p class="name">桜陵女子大学</p><address>〒000-0000<br>天府都 白金ヶ丘区 一丁目<br>OURYO WOMEN'S UNIVERSITY</address></div><div class="footer-links"><div><h4>大学について</h4><ul><li><a href="../about/message.html">学長挨拶</a></li><li><a href="../about/history.html">建学の精神・沿革</a></li><li><a href="clubs.html">クラブ・サークル</a></li></ul></div><div><h4>受験生の方へ</h4><ul><li><a href="../academics.html">学部・大学院</a></li><li><a href="../admissions/opencampus.html">オープンキャンパス</a></li><li><a href="../admissions/request.html">資料請求</a></li></ul></div><div><h4>強化・人気クラブ</h4><ul><li><a href="basketball.html">女子バスケットボール部</a></li><li><a href="cheerleading.html">チアリーダー部</a></li><li><a href="festival.html">桜陵祭（学園祭）</a></li></ul></div></div></div><div class="footer-bottom">&copy; 2026 Ouryo Women's University. All Rights Reserved.</div></div></footer>
+<footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><p class="name">桜陵女子大学</p><address>〒000-0000<br>天府都 白金ヶ丘区 一丁目<br>OURYO WOMEN'S UNIVERSITY</address></div><div class="footer-links"><div><h4>大学について</h4><ul><li><a href="../about/message.html">学長挨拶</a></li><li><a href="../about/history.html">建学の精神・沿革</a></li><li><a href="clubs.html">クラブ・サークル</a></li></ul></div><div><h4>受験生の方へ</h4><ul><li><a href="../academics.html">学部・大学院</a></li><li><a href="../admissions/opencampus.html">オープンキャンパス</a></li><li><a href="../admissions/request.html">資料請求</a></li></ul></div><div><h4>強化クラブ・人気サークル</h4><ul><li><a href="basketball.html">女子バスケットボール部</a></li><li><a href="cheerleading.html">チアリーダー部</a></li><li><a href="dance.html">ダンスサークル BLOOM</a></li></ul></div></div></div><div class="footer-bottom">&copy; 2026 Ouryo Women's University. All Rights Reserved.</div></div></footer>
 
 <script src="../assets/common.js"></script>
 </body>
