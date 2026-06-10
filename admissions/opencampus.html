@@ -1,0 +1,178 @@
+<!-- File: admissions/opencampus.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>オープンキャンパス | 桜陵女子大学</title>
+<meta name="description" content="桜陵女子大学のオープンキャンパス情報。模擬授業・学部相談・キャンパスツアーなど、大学の魅力を体験できます。予約はこちらから。">
+<link rel="stylesheet" href="../assets/common.css">
+<style>
+.page-hero { background: linear-gradient(135deg, #d9a7ae 0%, #b76e79 60%, #8e4d57 100%); color: #fff; text-align: center; padding: 4rem 0; }
+.page-hero h1 { font-family: var(--font-mincho); font-size: 2.2rem; letter-spacing: 0.1em; margin-bottom: 0.6rem; text-shadow: 0 2px 12px rgba(0,0,0,0.2); }
+.page-hero .en { font-size: 0.8rem; letter-spacing: 0.25em; opacity: 0.9; }
+
+/* 開催日カード */
+.oc-date-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
+.oc-date-card { background-color: var(--color-bg); border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); transition: transform 0.25s, box-shadow 0.25s; }
+.oc-date-card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(183,110,121,0.18); }
+.oc-date-visual { height: 140px; font-size: 3rem; }
+.oc-date-body { padding: 1.5rem; text-align: center; }
+.oc-date-body .round { font-size: 0.75rem; letter-spacing: 0.15em; color: var(--color-primary); }
+.oc-date-body .date { font-family: var(--font-mincho); font-size: 1.3rem; color: var(--color-accent); margin: 0.3rem 0; }
+.oc-date-body .time { font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 1rem; }
+
+/* プログラム */
+.program-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 880px; margin: 0 auto; }
+.program-item { background-color: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid var(--color-primary); border-radius: 8px; padding: 1.4rem 1.6rem; }
+.program-item h4 { font-family: var(--font-mincho); color: var(--color-accent); font-size: 1.05rem; margin-bottom: 0.4rem; }
+.program-item p { font-size: 0.85rem; color: var(--color-text-light); }
+
+/* 予約フォーム */
+.form-wrap { max-width: 720px; margin: 0 auto; background-color: var(--color-bg); border: 1px solid var(--color-border); border-radius: 14px; padding: 2.5rem; box-shadow: var(--shadow); }
+.form-row { margin-bottom: 1.6rem; }
+.form-row label { display: block; font-family: var(--font-mincho); font-size: 0.9rem; color: var(--color-primary-dark); margin-bottom: 0.5rem; }
+.form-row label .req { background-color: var(--color-primary); color: #fff; font-size: 0.65rem; padding: 0.1rem 0.5rem; border-radius: 4px; margin-left: 0.5rem; font-family: var(--font-gothic); }
+.form-row input, .form-row select { width: 100%; padding: 0.8rem 1rem; border: 1px solid var(--color-border); border-radius: 8px; font-size: 0.95rem; font-family: var(--font-gothic); color: var(--color-text); background-color: #fff; transition: border-color 0.2s; }
+.form-row input:focus, .form-row select:focus { outline: none; border-color: var(--color-primary); }
+.form-col2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.form-note { font-size: 0.78rem; color: var(--color-text-light); margin-top: 0.4rem; }
+.form-check { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.88rem; }
+.form-check input { width: auto; margin-top: 0.3rem; }
+.form-submit { text-align: center; margin-top: 2rem; }
+
+@media (max-width: 900px) { .oc-date-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .program-grid { grid-template-columns: 1fr; } .form-col2 { grid-template-columns: 1fr; } .form-wrap { padding: 1.8rem; } .page-hero h1 { font-size: 1.7rem; } section { padding: 3.5rem 0; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../index.html" class="site-logo">桜陵女子大学<span>OURYO WOMEN'S UNIVERSITY</span></a>
+    <nav class="global-nav"><ul>
+      <li><a href="../about/message.html">大学について</a></li>
+      <li><a href="../academics.html">学部・大学院</a></li>
+      <li><a href="index.html">入試情報</a></li>
+      <li><a href="../index.html#campuslife">キャンパスライフ</a></li>
+      <li><a href="#">就職・キャリア</a></li>
+    </ul></nav>
+    <div class="header-cta">
+      <a href="request.html" class="btn btn-outline">資料請求</a>
+      <a href="opencampus.html" class="btn btn-primary">オープンキャンパス</a>
+    </div>
+    <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="drawer-overlay"></div>
+<nav class="drawer" id="drawer" aria-hidden="true" aria-label="モバイルメニュー">
+  <div class="drawer-nav"><ul>
+    <li><a href="../about/message.html">学長挨拶</a></li>
+    <li><a href="../about/history.html">建学の精神・沿革</a></li>
+    <li><a href="../academics.html">学部・大学院</a></li>
+    <li><a href="index.html">入試情報</a></li>
+    <li><a href="../affiliated-school.html">併設校・付属高校</a></li>
+  </ul></div>
+  <div class="drawer-cta">
+    <a href="request.html" class="btn btn-outline">資料請求</a>
+    <a href="opencampus.html" class="btn btn-primary">オープンキャンパス予約</a>
+  </div>
+</nav>
+
+<div class="breadcrumb"><div class="container"><a href="../index.html">ホーム</a> ＞ <a href="index.html">入試情報</a> ＞ オープンキャンパス</div></div>
+
+<section class="page-hero">
+  <p class="en">OPEN CAMPUS</p>
+  <h1>オープンキャンパス</h1>
+</section>
+
+<section>
+  <div class="container">
+    <p class="lead-text reveal">キャンパスで、未来を感じよう。模擬授業・学部相談・キャンパスツアー・先輩との交流など、桜陵女子大学の魅力を体験できます。保護者の方向けプログラムも充実しています。</p>
+  </div>
+</section>
+
+<!-- 開催日 -->
+<section class="section-bg-soft">
+  <div class="container">
+    <div class="section-title reveal"><p class="en">Schedule</p><h2>開催日程</h2></div>
+    <div class="oc-date-grid">
+      <div class="oc-date-card reveal" data-delay="1">
+        <div class="oc-date-visual img-ph" data-img="../assets/img/oc-summer1.jpg"><span class="img-ph-icon">☀️</span></div>
+        <div class="oc-date-body"><p class="round">第1回</p><p class="date">7月20日（日）</p><p class="time">10:00 - 15:00</p><a href="#reserve" class="btn btn-primary">この日を予約</a></div>
+      </div>
+      <div class="oc-date-card reveal" data-delay="2">
+        <div class="oc-date-visual img-ph" data-img="../assets/img/oc-summer2.jpg"><span class="img-ph-icon">🌻</span></div>
+        <div class="oc-date-body"><p class="round">第2回</p><p class="date">8月17日（日）</p><p class="time">10:00 - 15:00</p><a href="#reserve" class="btn btn-primary">この日を予約</a></div>
+      </div>
+      <div class="oc-date-card reveal" data-delay="3">
+        <div class="oc-date-visual img-ph" data-img="../assets/img/oc-autumn.jpg"><span class="img-ph-icon">🍁</span></div>
+        <div class="oc-date-body"><p class="round">第3回</p><p class="date">9月14日（日）</p><p class="time">10:00 - 15:00</p><a href="#reserve" class="btn btn-primary">この日を予約</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- プログラム -->
+<section>
+  <div class="container">
+    <div class="section-title reveal"><p class="en">Program</p><h2>当日のプログラム</h2></div>
+    <div class="program-grid">
+      <div class="program-item reveal" data-delay="1"><h4>🎓 模擬授業</h4><p>各学部の先生による体験授業で、大学の学びをリアルに感じられます。</p></div>
+      <div class="program-item reveal" data-delay="1"><h4>💬 学部・入試相談</h4><p>教員や在学生に、学びや入試について直接質問できます。</p></div>
+      <div class="program-item reveal" data-delay="2"><h4>🏫 キャンパスツアー</h4><p>在学生の案内で、図書館や実習施設などを見学できます。</p></div>
+      <div class="program-item reveal" data-delay="2"><h4>👥 在学生トーク</h4><p>先輩のリアルな大学生活を聞ける、人気のプログラムです。</p></div>
+      <div class="program-item reveal" data-delay="3"><h4>👨‍👩‍👧 保護者向け説明会</h4><p>学費・奨学金・就職など、保護者の方の疑問にお答えします。</p></div>
+      <div class="program-item reveal" data-delay="3"><h4>🍴 学食体験</h4><p>実際の学生食堂で、キャンパスの雰囲気を味わえます。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 予約フォーム -->
+<section id="reserve" class="section-bg-soft">
+  <div class="container">
+    <div class="section-title reveal"><p class="en">Reservation</p><h2>来場予約フォーム</h2></div>
+    <form class="form-wrap reveal" action="#" method="post" novalidate>
+      <div class="form-row">
+        <label>参加希望日 <span class="req">必須</span></label>
+        <select name="oc_date" required>
+          <option value="">選択してください</option>
+          <option>第1回 7月20日（日）</option>
+          <option>第2回 8月17日（日）</option>
+          <option>第3回 9月14日（日）</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>お名前 <span class="req">必須</span></label>
+        <div class="form-col2"><input type="text" name="last_name" placeholder="姓" required><input type="text" name="first_name" placeholder="名" required></div>
+      </div>
+      <div class="form-row">
+        <label>メールアドレス <span class="req">必須</span></label>
+        <input type="email" name="email" placeholder="example@example.com" required>
+      </div>
+      <div class="form-row">
+        <label>ご身分 <span class="req">必須</span></label>
+        <select name="status" required><option value="">選択してください</option><option>高校1年生</option><option>高校2年生</option><option>高校3年生</option><option>既卒生</option><option>保護者</option><option>その他</option></select>
+      </div>
+      <div class="form-row">
+        <label>同伴人数</label>
+        <select name="companion"><option>0名</option><option>1名</option><option>2名</option><option>3名以上</option></select>
+        <p class="form-note">保護者の方などの同伴人数をお選びください。</p>
+      </div>
+      <div class="form-row">
+        <label class="form-check"><input type="checkbox" name="agree" required><span>個人情報の取り扱いに同意します。ご入力いただいた情報は、本イベントの運営にのみ使用します。</span></label>
+      </div>
+      <div class="form-submit">
+        <button type="submit" class="btn btn-primary btn-lg">この内容で予約する</button>
+        <p class="form-note" style="margin-top:1rem;">※ 本フォームは架空サイトのデモであり、実際には送信されません。</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><p class="name">桜陵女子大学</p><address>〒000-0000<br>天府都 白金ヶ丘区 一丁目<br>OURYO WOMEN'S UNIVERSITY</address></div><div class="footer-links"><div><h4>大学について</h4><ul><li><a href="../about/message.html">学長挨拶</a></li><li><a href="../about/history.html">建学の精神・沿革</a></li><li><a href="../affiliated-school.html">併設校・付属高校</a></li></ul></div><div><h4>受験生の方へ</h4><ul><li><a href="../academics.html">学部・大学院</a></li><li><a href="opencampus.html">オープンキャンパス</a></li><li><a href="request.html">資料請求</a></li></ul></div><div><h4>関連校</h4><ul><li><a href="../affiliated-school.html">桜陵女子高等学校</a></li></ul></div></div></div><div class="footer-bottom">&copy; 2026 Ouryo Women's University. All Rights Reserved.</div></div></footer>
+
+<script src="../assets/common.js"></script>
+</body>
+</html>
